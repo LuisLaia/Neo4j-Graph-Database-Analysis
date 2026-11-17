@@ -1,0 +1,127 @@
+Cidade,Top3
+" Atlanta","[
+  {
+    total: 1937,
+    produto: AAA Batteries (4-pack)
+  },
+  {
+    total: 1758,
+    produto: AA Batteries (4-pack)
+  },
+  {
+    total: 1571,
+    produto: USB-C Charging Cable
+  }
+]"
+" Austin","[
+  {
+    total: 1369,
+    produto: AAA Batteries (4-pack)
+  },
+  {
+    total: 1141,
+    produto: AA Batteries (4-pack)
+  },
+  {
+    total: 1046,
+    produto: Lightning Charging Cable
+  }
+]"
+" Boston","[
+  {
+    total: 2783,
+    produto: AAA Batteries (4-pack)
+  },
+  {
+    total: 2381,
+    produto: AA Batteries (4-pack)
+  },
+  {
+    total: 2043,
+    produto: USB-C Charging Cable
+  }
+]"
+" Dallas","[
+  {
+    total: 2058,
+    produto: AAA Batteries (4-pack)
+  },
+  {
+    total: 1829,
+    produto: AA Batteries (4-pack)
+  },
+  {
+    total: 1512,
+    produto: Lightning Charging Cable
+  }
+]"
+" Los Angeles","[
+  {
+    total: 4055,
+    produto: AAA Batteries (4-pack)
+  },
+  {
+    total: 3564,
+    produto: AA Batteries (4-pack)
+  },
+  {
+    total: 3054,
+    produto: Lightning Charging Cable
+  }
+]"
+" New York City","[
+  {
+    total: 3343,
+    produto: AAA Batteries (4-pack)
+  },
+  {
+    total: 2883,
+    produto: AA Batteries (4-pack)
+  },
+  {
+    total: 2624,
+    produto: USB-C Charging Cable
+  }
+]"
+" Portland","[
+  {
+    total: 1636,
+    produto: AAA Batteries (4-pack)
+  },
+  {
+    total: 1594,
+    produto: AA Batteries (4-pack)
+  },
+  {
+    total: 1289,
+    produto: USB-C Charging Cable
+  }
+]"
+" San Francisco","[
+  {
+    total: 5954,
+    produto: AAA Batteries (4-pack)
+  },
+  {
+    total: 5202,
+    produto: AA Batteries (4-pack)
+  },
+  {
+    total: 4717,
+    produto: USB-C Charging Cable
+  }
+]"
+" Seattle","[
+  {
+    total: 1951,
+    produto: AAA Batteries (4-pack)
+  },
+  {
+    total: 1782,
+    produto: AA Batteries (4-pack)
+  },
+  {
+    total: 1528,
+    produto: USB-C Charging Cable
+  }
+]"

@@ -1,0 +1,454 @@
+{
+  "version": "3.0.0",
+  "visualisation": {
+    "nodes": [
+      {
+        "id": "n:1",
+        "position": {
+          "x": 130.7127218293181,
+          "y": 240.20584595907155
+        }
+      },
+      {
+        "id": "n:2",
+        "position": {
+          "x": -21.26114833607514,
+          "y": 241.0762460400203
+        }
+      },
+      {
+        "id": "n:3",
+        "position": {
+          "x": 289.53089785276933,
+          "y": 238.75758196216947
+        }
+      }
+    ]
+  },
+  "dataModel": {
+    "version": "3.0",
+    "graphSchemaRepresentation": {
+      "version": "1.0.0",
+      "graphSchema": {
+        "nodeLabels": [
+          {
+            "$id": "nl:1",
+            "token": "Encomenda",
+            "properties": [
+              {
+                "$id": "p:2",
+                "token": "Order ID",
+                "type": {
+                  "type": "integer"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:3",
+                "token": "Sales",
+                "type": {
+                  "type": "float"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:4",
+                "token": "Month",
+                "type": {
+                  "type": "integer"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:5",
+                "token": "Hour",
+                "type": {
+                  "type": "integer"
+                },
+                "nullable": true
+              }
+            ]
+          },
+          {
+            "$id": "nl:2",
+            "token": "Morada",
+            "properties": [
+              {
+                "$id": "p:8",
+                "token": "City",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              }
+            ]
+          },
+          {
+            "$id": "nl:3",
+            "token": "Produto",
+            "properties": [
+              {
+                "$id": "p:1",
+                "token": "Product",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              }
+            ]
+          }
+        ],
+        "relationshipTypes": [
+          {
+            "$id": "rt:2",
+            "token": "ENVIADA_PARA",
+            "properties": []
+          },
+          {
+            "$id": "rt:3",
+            "token": "TEM_ITEM",
+            "properties": [
+              {
+                "$id": "p:9",
+                "token": "Quantity Ordered",
+                "type": {
+                  "type": "integer"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:10",
+                "token": "Price Each",
+                "type": {
+                  "type": "float"
+                },
+                "nullable": true
+              }
+            ]
+          }
+        ],
+        "nodeObjectTypes": [
+          {
+            "$id": "n:1",
+            "labels": [
+              {
+                "$ref": "#nl:1"
+              }
+            ]
+          },
+          {
+            "$id": "n:2",
+            "labels": [
+              {
+                "$ref": "#nl:2"
+              }
+            ]
+          },
+          {
+            "$id": "n:3",
+            "labels": [
+              {
+                "$ref": "#nl:3"
+              }
+            ]
+          }
+        ],
+        "relationshipObjectTypes": [
+          {
+            "$id": "r:2",
+            "type": {
+              "$ref": "#rt:2"
+            },
+            "from": {
+              "$ref": "#n:1"
+            },
+            "to": {
+              "$ref": "#n:2"
+            }
+          },
+          {
+            "$id": "r:3",
+            "type": {
+              "$ref": "#rt:3"
+            },
+            "from": {
+              "$ref": "#n:1"
+            },
+            "to": {
+              "$ref": "#n:3"
+            }
+          }
+        ],
+        "constraints": [
+          {
+            "$id": "c:1",
+            "name": "Product_Produto_key",
+            "constraintType": "key",
+            "entityType": "node",
+            "nodeLabel": {
+              "$ref": "#nl:3"
+            },
+            "properties": [
+              {
+                "$ref": "#p:1"
+              }
+            ]
+          },
+          {
+            "$id": "c:2",
+            "name": "Order_ID_Encomenda_key",
+            "constraintType": "key",
+            "entityType": "node",
+            "nodeLabel": {
+              "$ref": "#nl:1"
+            },
+            "properties": [
+              {
+                "$ref": "#p:2"
+              }
+            ]
+          },
+          {
+            "$id": "c:3",
+            "name": "City_Morada_key",
+            "constraintType": "key",
+            "entityType": "node",
+            "nodeLabel": {
+              "$ref": "#nl:2"
+            },
+            "properties": [
+              {
+                "$ref": "#p:8"
+              }
+            ]
+          }
+        ],
+        "indexes": []
+      }
+    },
+    "graphSchemaExtensionsRepresentation": {
+      "nodeKeyProperties": [
+        {
+          "node": {
+            "$ref": "#n:3"
+          },
+          "keyProperties": [
+            {
+              "$ref": "#p:1"
+            }
+          ]
+        },
+        {
+          "node": {
+            "$ref": "#n:1"
+          },
+          "keyProperties": [
+            {
+              "$ref": "#p:2"
+            }
+          ]
+        },
+        {
+          "node": {
+            "$ref": "#n:2"
+          },
+          "keyProperties": [
+            {
+              "$ref": "#p:8"
+            }
+          ]
+        }
+      ],
+      "relationshipKeyProperties": []
+    },
+    "graphMappingRepresentation": {
+      "dataSourceSchema": {
+        "type": "local",
+        "tableSchemas": [
+          {
+            "expanded": true,
+            "fields": [
+              {
+                "name": "Order ID",
+                "sample": "295665",
+                "recommendedType": {
+                  "type": "integer"
+                }
+              },
+              {
+                "name": "Product",
+                "sample": "Macbook Pro Laptop",
+                "recommendedType": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "Quantity Ordered",
+                "sample": "1",
+                "recommendedType": {
+                  "type": "integer"
+                }
+              },
+              {
+                "name": "Price Each",
+                "sample": "1700.0",
+                "recommendedType": {
+                  "type": "float"
+                }
+              },
+              {
+                "name": "Order Date",
+                "sample": "2019-12-30 00:01:00",
+                "recommendedType": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "Purchase Address",
+                "sample": "136 Church St, New York City, NY 10001",
+                "recommendedType": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "Month",
+                "sample": "12",
+                "recommendedType": {
+                  "type": "integer"
+                }
+              },
+              {
+                "name": "Sales",
+                "sample": "1700.0",
+                "recommendedType": {
+                  "type": "float"
+                }
+              },
+              {
+                "name": "City",
+                "sample": " New York City",
+                "recommendedType": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "Hour",
+                "sample": "0",
+                "recommendedType": {
+                  "type": "integer"
+                }
+              }
+            ],
+            "name": "Electronic_Sales.csv"
+          }
+        ]
+      },
+      "nodeMappings": [
+        {
+          "node": {
+            "$ref": "#n:1"
+          },
+          "tableName": "Electronic_Sales.csv",
+          "propertyMappings": [
+            {
+              "fieldName": "Order ID",
+              "property": {
+                "$ref": "#p:2"
+              }
+            },
+            {
+              "fieldName": "Sales",
+              "property": {
+                "$ref": "#p:3"
+              }
+            },
+            {
+              "fieldName": "Month",
+              "property": {
+                "$ref": "#p:4"
+              }
+            },
+            {
+              "fieldName": "Hour",
+              "property": {
+                "$ref": "#p:5"
+              }
+            }
+          ]
+        },
+        {
+          "node": {
+            "$ref": "#n:2"
+          },
+          "tableName": "Electronic_Sales.csv",
+          "propertyMappings": [
+            {
+              "fieldName": "City",
+              "property": {
+                "$ref": "#p:8"
+              }
+            }
+          ]
+        },
+        {
+          "node": {
+            "$ref": "#n:3"
+          },
+          "tableName": "Electronic_Sales.csv",
+          "propertyMappings": [
+            {
+              "fieldName": "Product",
+              "property": {
+                "$ref": "#p:1"
+              }
+            }
+          ]
+        }
+      ],
+      "relationshipMappings": [
+        {
+          "relationship": {
+            "$ref": "#r:3"
+          },
+          "tableName": "Electronic_Sales.csv",
+          "propertyMappings": [
+            {
+              "fieldName": "Quantity Ordered",
+              "property": {
+                "$ref": "#p:9"
+              }
+            },
+            {
+              "fieldName": "Price Each",
+              "property": {
+                "$ref": "#p:10"
+              }
+            }
+          ],
+          "fromMappings": {
+            "#p:2": "Order ID"
+          },
+          "toMappings": {
+            "#p:1": "Product"
+          }
+        },
+        {
+          "relationship": {
+            "$ref": "#r:2"
+          },
+          "tableName": "Electronic_Sales.csv",
+          "propertyMappings": [],
+          "fromMappings": {
+            "#p:2": "Order ID"
+          },
+          "toMappings": {
+            "#p:8": "City"
+          }
+        }
+      ]
+    },
+    "configurations": {
+      "idsToIgnore": []
+    }
+  }
+}
